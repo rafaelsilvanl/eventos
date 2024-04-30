@@ -40,14 +40,16 @@ compartilhar.addEventListener('click', async() => {
   `
 
   let shareData = {
-    title: 'Eventos',
+    title: 'Informe Eventos',
     text: texto
   };
 
- alert(shareData.text);
+  await navigator.share(shareData);
+
+});  
 
 // botao copiar
-});
+
 
 
   copiar.addEventListener('click', async() => {
@@ -88,7 +90,7 @@ compartilhar.addEventListener('click', async() => {
     text: texto
   };
 
- alert("Conteúdo copiado para a área de transfeência!");    
+ alert("Conteúdo copiado para a área de transferência!");    
  await navigator.clipboard.writeText(shareData.text);
 
 
